@@ -15,7 +15,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <net/if.h>
-#include <net/if_arp.h>
+#include <linux/if_arp.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -794,6 +794,12 @@ static int builtin_net_id(sd_device *dev, int argc, char *argv[], bool test) {
                 break;
         case ARPHRD_SLIP:
                 prefix = "sl";
+                break;
+        case ARPHRD_CAN:
+                if (naming_scheme_has(NAMING_CAN))
+                        prefix = "ca";
+                else
+                        return 0;
                 break;
         default:
                 return 0;

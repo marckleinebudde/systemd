@@ -89,6 +89,10 @@
             <entry><constant>ww</constant></entry>
             <entry>Wireless wide area network (WWAN)</entry>
           </row>
+          <row>
+            <entry><constant>ca</constant></entry>
+            <entry>Controller area network (CAN Bus)</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>

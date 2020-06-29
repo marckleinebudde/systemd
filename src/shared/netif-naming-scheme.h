@@ -31,6 +31,7 @@ typedef enum NamingSchemeFlags {
         NAMING_NETDEVSIM           = 1 << 6, /* Generate names for netdevsim devices, see eaa9d507d855 */
         NAMING_LABEL_NOPREFIX      = 1 << 7, /* Don't prepend ID_NET_LABEL_ONBOARD with interface type prefix */
         NAMING_NSPAWN_LONG_HASH    = 1 << 8, /* Shorten nspawn interfaces by including 24bit hash, instead of simple truncation  */
+        NAMING_CAN                 = 1 << 9, /* Use "ca" prefix for CAN */
 
         /* And now the masks that combine the features above */
         NAMING_V238 = 0,
